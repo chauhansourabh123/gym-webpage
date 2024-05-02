@@ -1,0 +1,649 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+body,
+html {
+    font-family: 'Roboto', 'Helvetica', 'Sans-serif';
+}
+
+.container {
+    max-width: 1280px;
+    width: 100%;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.gap {
+    gap: 5px;
+}
+
+.none {
+    display: none;
+}
+
+section {
+    padding: 50px 0;
+}
+
+.h1 {
+    text-align: center;
+    font-size: 45px;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    font-weight: 600;
+}
+
+/* utilities ends */
+
+
+.slider {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+}
+
+.slide {
+    flex: 1;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    color: #fff;
+    background-color: #333;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.topContent {
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 99;
+    transform: translate(-50%, -50%);
+    width: 100%;
+
+    i {
+        font-size: 35px;
+        color: rgb(46, 46, 225);
+
+    }
+
+    h1 {
+        font-size: 12vw;
+        word-break: unset;
+    }
+
+    button {
+        background-color: rgb(57, 57, 236);
+        outline: none;
+        border: none;
+        padding: 15px 25px;
+        font-size: 16px;
+        letter-spacing: 3px;
+    }
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(33, 33, 33, 0.6);
+    width: 100%;
+    padding: 10px 0;
+    line-height: 30px;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.navbar ul li {
+    list-style-type: none;
+}
+
+.menubar {
+    /* display: none; */
+    font-size: 25px;
+    border: 1px solid white;
+    padding: 3px 7px;
+    cursor: pointer;
+}
+
+.logo {
+    border: 2px solid white;
+    font-size: 30px;
+    font-weight: 600;
+    padding: 15px 25px;
+}
+
+
+.mobileMenuBar.height {
+    height: 100%;
+}
+
+.mobileMenuBar {
+    position: absolute;
+    top: 150px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 15px;
+    height: 0;
+    overflow: hidden;
+    display: none;
+    transition: height 1s ease-in-out;
+
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        margin-top: 15px;
+    }
+
+    li {
+        list-style-type: none;
+        font-size: 18px;
+        cursor: pointer;
+
+    }
+}
+
+
+@media (max-width: 750px) {
+    .navbar ul {
+        display: none;
+    }
+
+    .logo {
+        padding: 10px 20px;
+        font-size: 20px;
+    }
+
+    .mobilenav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .mobileMenuBar {
+        display: block;
+    }
+}
+
+/* Best Trainer section starts */
+.bestTrainer {
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 25px;
+    padding: 50px 0;
+
+    /* background-color: red; */
+}
+
+.card {
+    position: relative;
+}
+
+.cardContext {
+    width: 33%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card .image {
+    width: 100%;
+    min-width: 245px;
+}
+
+.icon {
+    background-color: rgb(62, 62, 239);
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: 80%;
+    left: 35%;
+
+}
+
+.cardContent {
+    margin-top: 100px;
+    text-align: center;
+
+}
+
+.cardContent h2 {
+    color: rgb(60, 60, 60);
+    font-weight: 100;
+    font-size: 18px;
+    letter-spacing: 3px;
+}
+
+.cardContent p {
+
+    margin-top: 20px;
+    color: #555555;
+    line-height: 28px;
+}
+
+@media (max-width: 810px) {
+    .bestTrainer {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .cardContext {
+        width: 80%;
+    }
+}
+
+/* Best Trainer section ends */
+
+
+/* Services starts */
+
+#services {
+    background-color: #1d1d1d;
+}
+
+#services h1 {
+    padding: 50px 0;
+}
+
+.serviceCards {
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.serviceCard img {
+    width: 70px;
+}
+
+.serviceCard {
+    text-align: center;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.serviceCard p {
+    line-height: 27px;
+    color: #696969;
+    font-size: 14px;
+}
+
+.btn {
+    width: 100%;
+    margin-top: 80px;
+    justify-content: center;
+}
+
+.btn button {
+    letter-spacing: 3px;
+    padding: 18px 55px;
+    background-color: rgb(51, 51, 229);
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    outline: none;
+}
+
+@media (max-width: 800px) {
+    .serviceCards {
+        flex-direction: column;
+        max-width: 450px;
+        margin: 0 auto;
+    }
+
+    .serviceCard {
+        margin-top: 30px;
+    }
+}
+
+/* Services starts */
+
+/* Trainer starts */
+
+#trainer {
+    background-image: url(https://onclickwebdesign.com/wp-content/uploads/trainer-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.small {
+    font-size: 14px;
+}
+
+.sliderCardContainer {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    /* Limit the slider width */
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.control-btn {
+    background-color: #f8f9f9;
+    color: rgb(62, 73, 225);
+    border: none;
+    padding: 3px 15px;
+    border-radius: 50%;
+    font-size: 30px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+#prevBtn {
+    margin-right: 10px;
+}
+
+#nextBtn {
+    margin-left: 10px;
+}
+
+.card-slider {
+    display: flex;
+    justify-content: space-evenly;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card {
+    width: 280px;
+    margin: 10px;
+    background-color: transparent;
+    text-align: center;
+}
+
+.card h4 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 25px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.card p {
+    margin-top: 22px;
+    letter-spacing: 1px;
+    color: #919191;
+}
+
+.card img {
+    width: 100%;
+}
+
+/* Trainer ends */
+
+/* classes starts */
+
+.classes {
+    align-items: start;
+    justify-content: center;
+    gap: 20px;
+}
+
+.classes h4 {
+    color: #141414;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.classes span {
+    color: black;
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: #555555;
+    font-weight: 400;
+}
+
+
+.firstCard {
+    border: 1px solid grey;
+    padding: 60px 50px;
+    height: 460px;
+    overflow-y: hidden;
+    width: 350px;
+}
+
+.secondCard {
+    padding: 60px 30px;
+    border: 20px solid rgb(78, 49, 243);
+    background-image: url('https://onclickwebdesign.com/wp-content/uploads/woman-exercise.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 460px;
+    width: 350px;
+    overflow-y: hidden;
+
+
+    h5 {
+        font-size: 65px;
+        color: rgb(69, 69, 220);
+
+        span {
+            color: rgb(69, 69, 220);
+            font-weight: 600;
+        }
+    }
+
+}
+
+.thirdCard {
+    background-image: url('https://onclickwebdesign.com/wp-content/uploads/personal-trainer.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: red;
+    padding: 30px 40px;
+    width: 350px;
+    height: 460px;
+    overflow-y: hidden;
+
+    h4 {
+        color: white;
+    }
+
+    p {
+        word-spacing: 6px;
+        margin-top: 50px;
+        line-height: 30px;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 25px;
+        background-color: rgb(71, 71, 233);
+        padding: 19px 0;
+        font-weight: 600;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+}
+
+.timeCard {
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.timeCard p {
+    color: grey;
+    font-size: 12px;
+}
+
+@media (max-width: 1024px) {
+    .firstCard {
+        height: 540px;
+    }
+
+    .secondCard {
+        height: 540px;
+    }
+
+    .thirdCard {
+        height: 540px;
+    }
+}
+
+@media (max-width: 850px) {
+    .classes {
+        flex-wrap: wrap;
+    }
+
+    .firstCard {
+        width: auto;
+    }
+
+    .secondCard {
+        width: auto;
+    }
+
+    .thirdCard {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 750px) {
+
+    .firstCard {
+        width: 100%;
+        height: auto;
+    }
+
+    .secondCard {
+        width: 100%;
+        height: auto;
+    }
+
+}
+
+/* classes ends */
+
+/* footer starts */
+
+#footer {
+    background-image: url('https://onclickwebdesign.com/wp-content/uploads/footer-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.footerContainer {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.footerLogo {
+    border: 2px solid white;
+    display: inline-block;
+    padding: 10px 14px;
+}
+
+.footerContainer li {
+    font-size: 14px;
+    font-weight: 100;
+    margin-left: 40px;
+    list-style-type: none;
+    margin-top: 15px;
+}
+
+.footerContainer input {
+    padding: 25px 150px;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    border-left: 2px solid white;
+    border-right: none;
+    background-color: transparent;
+}
+
+.footerContainer button {
+    padding: 25px 50px;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    border-left: none;
+    background-color: rgb(50, 50, 231);
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.icons {
+    gap: 5vw;
+}
+
+.copyright {
+    font-size: 13px;
+    color: rgb(206, 206, 206);
+    text-align: center;
+}
+
+@media (max-width: 670px) {
+    .footerContainer input {
+        padding: 15px 50px;
+    }
+
+    .footerContainer button {
+        padding: 15px 50px;
+    }
+
+}
+
+@media (max-width: 470px) {
+    .footerContainer input {
+        padding: 8px 15px;
+    }
+
+    .footerContainer button {
+        padding: 8px 10px;
+    }
+
+}
+
+/* footer ends */
